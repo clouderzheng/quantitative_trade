@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>量化交易系统</title>
+    <link rel="shortcut icon" href="../static/image/favicon-night.ico" />
+	<link rel="stylesheet" href="../static/css/auth.css">
+    <script src="../static/js/jquery.min.js"></script>
+    <style>
+
+        .lowin-img{
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+
+<body>
+	<div class="lowin lowin-purple">
+		<div>
+			<img   class="lowin-img" src="../static/image/night.jpg" alt="logo">
+		</div>
+		<div class="lowin-wrapper">
+			<div class="lowin-box lowin-login">
+				<div class="lowin-box-inner">
+					<form>
+						<p>Sign in to continue</p>
+						<div class="lowin-group">
+							<label>Account </label>
+							<input type="input" autocomplete="account" id="account" class="lowin-input">
+						</div>
+						<div class="lowin-group password-group">
+							<label>Password </label>
+							<input type="password" id="password" autocomplete="current-password" class="lowin-input">
+						</div>
+						<button  type = "button" class="lowin-btn" onclick="login()">
+							login
+						</button>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	
+		<footer class="lowin-footer">
+			Design By @night</a>
+		</footer>
+	</div>
+
+
+</body>
+<script>
+
+    function login(){
+        var account = $("#account").val();
+        var password = $("#password").val();
+        var data = {
+            "account" : account,
+            "password" : password
+        }
+        $.ajax({
+            url : "/loginin/",
+            type : "POST",
+            dataType: "json",
+            async : false,
+            data : data,
+            success : function (res){
+                alert(res.code)
+                alert(res.msg)
+            },
+            error : function (res){
+                alert("报错了")
+            }
+        })
+    }
+
+</script>
+</html>

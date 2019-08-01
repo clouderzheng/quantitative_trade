@@ -20,4 +20,6 @@ from python_trade_system import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'index/', views.index),
+    path(r'login/', views.login),
+    path(r'loginin/', views.loginin),
 ]
