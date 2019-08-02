@@ -1,4 +1,4 @@
-import mysql_util
+from python_trade_system.mysql import mysql_util
 """根据账户名称获取系统用户信息"""
 def get_system_user(account):
     """获取数据库连接"""

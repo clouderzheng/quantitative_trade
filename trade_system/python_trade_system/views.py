@@ -1,12 +1,14 @@
 from django.shortcuts import render
 from django.shortcuts import  HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-import system_user_service
+from python_trade_system.system import system_user_service
 import json
+import uuid
 # Create your views here.
 
+"""跳转首页"""
 def index(request):
-    return HttpResponse("hello world")
+    return render(request, "index.html")
 
 """跳转登陆页面"""
 def login(request):
@@ -22,11 +24,17 @@ def loginin(request):
     result = {}
     user = system_user_service.get_system_user(account)
 
-    if((user !=  False) & (user['password'].decode(encoding='utf-8') == password)):
-        result['code'] = '0000'
-        result['msg'] = 'success'
-    else:
-        result['code'] = '9999'
-        result['msg'] = 'fail'
+    if((user !=  False)):
+        _password = user['password'].decode(encoding='utf-8')
+        if(password == _password):
+            result['code'] = '0000'
+            result['msg'] = 'success'
+            token = str(uuid.uuid1())
+            result['token'] = token
+            request.session[token] = str(user)
+            return HttpResponse(json.dumps(result))
+
+    result['code'] = '9999'
+    result['msg'] = 'fail'
     return HttpResponse(json.dumps(result))
 

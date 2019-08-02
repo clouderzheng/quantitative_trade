@@ -1,7 +1,7 @@
 import pymysql
 from pymysql.cursors import DictCursor
 from DBUtils.PooledDB import  PooledDB
-import Config
+from python_trade_system.mysql import Config
 class Mysql(object):
 
     __pool = None

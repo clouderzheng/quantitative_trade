@@ -67,8 +67,11 @@
             async : false,
             data : data,
             success : function (res){
-                alert(res.code)
-                alert(res.msg)
+                if(res.code == "0000"){
+                    window.location.href= "/index?token="+res.token;
+                }else{
+                    alert(res.msg)
+                }
             },
             error : function (res){
                 alert("报错了")
