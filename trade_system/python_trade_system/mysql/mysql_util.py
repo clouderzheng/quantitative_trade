@@ -1,6 +1,6 @@
 import pymysql
 from pymysql.cursors import DictCursor
-from DBUtils.PooledDB import  PooledDB
+from DBUtils.PooledDB import PooledDB
 from python_trade_system.mysql import Config
 class Mysql(object):
 
