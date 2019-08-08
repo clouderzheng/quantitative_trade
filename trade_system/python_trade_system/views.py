@@ -47,9 +47,15 @@ def get_Nasdaq_Composite_Index(request):
 
     try:
         internationalIndice = InternationalIndice()
+        # 获取纳克达斯指数
         data = internationalIndice.get_Nasdaq_Composite_Index(100)
+        # 按照时间先后排序 升序
+        data = data.sort_values(by = 'day',axis = 0,ascending = True)
+        # 获取时间作为x轴
         times = np.array( data['day']).tolist()
+        # 开盘价 收盘价 最高价 最低价最为 y轴
         view_data = np.array(data[['open','close','low','high']]).tolist()
+        # 指数名称作为提示指标
         code_name = data['name'][0]
         result = {"times" : times, "view_data" : view_data,"code_name" : code_name}
     except:
