@@ -69,6 +69,7 @@
             success : function (res){
                 if(res.code == "0000"){
                     window.location.href= "/index?token="+res.token;
+                    sessionStorage.setItem("token", res.token);
                 }else{
                     alert(res.msg)
                 }

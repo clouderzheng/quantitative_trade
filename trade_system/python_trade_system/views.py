@@ -4,6 +4,9 @@ from django.views.decorators.csrf import csrf_exempt
 from python_trade_system.system import system_user_service
 import json
 import uuid
+from python_trade_system.jq_util.get_international_indice import InternationalIndice
+from python_trade_system.system.date_format_util import DateEnconding
+import numpy as np
 # Create your views here.
 
 """跳转首页"""
@@ -37,4 +40,22 @@ def loginin(request):
     result['code'] = '9999'
     result['msg'] = 'fail'
     return HttpResponse(json.dumps(result))
+
+"""获取纳克达斯指数"""
+@csrf_exempt
+def get_Nasdaq_Composite_Index(request):
+
+    try:
+        internationalIndice = InternationalIndice()
+        data = internationalIndice.get_Nasdaq_Composite_Index(100)
+        times = np.array( data['day']).tolist()
+        view_data = np.array(data[['open','close','low','high']]).tolist()
+        code_name = data['name'][0]
+        result = {"times" : times, "view_data" : view_data,"code_name" : code_name}
+    except:
+        result['code'] = "9999"
+        result.msg = "获取国际指数失败"
+    else:
+        result['code'] = "0000"
+    return HttpResponse(json.dumps(result, cls=DateEnconding))
 
