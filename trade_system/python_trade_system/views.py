@@ -65,3 +65,9 @@ def get_Nasdaq_Composite_Index(request):
         result['code'] = "0000"
     return HttpResponse(json.dumps(result, cls=DateEnconding))
 
+
+
+"""跳转分析数据页面"""
+@csrf_exempt
+def stock_analyze_page(request):
+    return render(request, "ui-alerts.html")

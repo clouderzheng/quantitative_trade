@@ -8,7 +8,7 @@ except ImportError:
 class SimpleMiddleware(MiddlewareMixin):
     def process_request(self, request):
 
-        if request.path != '/login/' and request.path != '/loginin/':
+        if request.path != '/login/' and request.path != '/loginin/' and not  request.path.endswith("html"):
             # 参数token
             token = request.GET.get("token")
             # 会话token

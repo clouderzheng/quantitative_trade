@@ -11,6 +11,6 @@ def login():
     # jqdatasdk.logout()
     jqdatasdk.auth(Config.jq_account, Config.jq_password)
 
-    print(jqdatasdk.__version__)
+    # print(jqdatasdk.__version__)
     print(jqdatasdk.get_query_count())
 # jqdatasdk.logout()

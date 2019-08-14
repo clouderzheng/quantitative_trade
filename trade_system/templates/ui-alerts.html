@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>股票分析</title>
+
+    <link rel="shortcut icon" href="../static/image/favicon-night.ico" />
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+    <!-- Styles -->
+    <link href="/static/css/assets/fontAwesome/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/static/css/assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="/static/css/assets/css/lib/mmc-chat.css" rel="stylesheet" />
+    <link href="/static/css/assets/css/lib/sidebar.css" rel="stylesheet">
+    <link href="/static/css/assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/assets/css/lib/nixon.css" rel="stylesheet">
+    <link href="/static/css/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+        <div class="nano">
+            <div class="nano-content">
+                <ul>
+                    <li class="active"><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="index.html">Dashboard 1</a></li>
+
+                        </ul>
+                    </li>
+
+
+
+                    <li><a href="app-profile.html"><i class="ti-user"></i> Profile</a></li>
+                    <li><a href="app-widget-card.html"><i class="ti-layout-grid2-alt"></i> Widget</a></li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-layout"></i> UI Elements <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="ui-accordion.html">Accordion</a></li>
+                            <li><a href="ui-alerts.html">Alerts</a></li>
+                            <li><a href="ui-badges.html">Badges</a></li>
+                            <li><a href="ui-button.html">Button</a></li>
+                            <li><a href="ui-dropdown.html">Dropdown</a></li>
+                            <li><a href="ui-Images.html">Images</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-panel"></i> Components <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="uc-calendar.html">Calendar</a></li>
+                            <li><a href="uc-carousel.html">Carousel</a></li>
+
+                            <li><a href="uc-datamap.html">Datamap</a></li>
+                            <li><a href="uc-todo-list.html">To do</a></li>
+                            <li><a href="uc-scrollable.html">Scrollable</a></li>
+                            <li><a href="uc-sweetalert.html">Sweet Alert</a></li>
+                            <li><a href="uc-toastr.html">Toastr</a></li>
+                            <li><a href="uc-range-slider-basic.html">Basic Range Slider</a></li>
+                            <li><a href="uc-range-slider-advance.html">Advance Range Slider</a></li>
+                            <li><a href="uc-nestable.html">Nestable</a></li>
+                            <li><a href="uc-portlets.html">Portlets</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a class="sidebar-sub-toggle"><i class="ti-bar-chart-alt"></i>  Charts  <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="chart-flot.html">Flot</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> Table <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="table-basic.html">Basic</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> Icons <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="font-themify.html">Themify</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li><a href="form-basic.html"><i class="ti-view-list-alt"></i> Basic Form </a></li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-files"></i> Invoice <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="invoice.html">Basic</a></li>
+                            <li><a href="invoice-editable.html">Editable</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a class="sidebar-sub-toggle"><i class="ti-target"></i> Pages <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                        <ul>
+                            <li><a href="page-login.html">Login</a></li>
+                            <li><a href="page-register.html">Register</a></li>
+                            <li><a href="page-reset-password.html">Forgot password</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a target="_blank" href="#"><i class="ti-file"></i> Documentation</a></li>
+                    <li><a><i class="ti-close"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /# sidebar -->
+
+
+
+
+    <div class="header">
+        <div class="pull-left">
+                        <div class="logo">
+                <a href="index.html">
+                    <img id="logoImg"
+                    src="logo/logo.png"
+                    data-logo_big="logo/logo.png"
+                    data-logo_small="logo/logoSmall.png"
+                    alt="Nixon" />
+                </a>
+            </div>
+            <div class="hamburger sidebar-toggle">
+                <span class="ti-menu"></span>
+            </div>
+        </div>
+
+        <div class="pull-right p-r-15">
+            <ul>
+                <li class="header-icon dib"><i class="ti-bell"></i>
+                    <div class="drop-down">
+                        <div class="dropdown-content-heading">
+                            <span class="text-left">Recent Notifications</span>
+                        </div>
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Mr. Jane</div>
+                                            <div class="notification-text">5 members joined today </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Mariam</div>
+                                            <div class="notification-text">likes a photo of you</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Tasnim</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Roe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" class="more-link">See All</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="header-icon dib"><i class="ti-email"></i>
+                    <div class="drop-down">
+                        <div class="dropdown-content-heading">
+                            <span class="text-left">2 New Messages</span>
+                            <a href="app-email.html"><i class="ti-pencil-alt pull-right"></i></a>
+                        </div>
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li class="notification-unread">
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/1.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Doe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li class="notification-unread">
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Roe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/3.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Doe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <img class="pull-left m-r-10 avatar-img" src="assets/images/avatar/2.jpg" alt="" />
+                                        <div class="notification-content">
+                                            <small class="notification-timestamp pull-right">02:34 PM</small>
+                                            <div class="notification-heading">Jane Roe</div>
+                                            <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="text-center">
+                                    <a href="#" class="more-link">See All</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="header-icon dib chat-sidebar-icon"><i class="ti-comments"></i></li>
+                <li class="header-icon dib"><img class="avatar-img" src="assets/images/avatar/1.jpg" alt="" /> <span class="user-avatar">Jane <i class="ti-angle-down f-s-10"></i></span>
+                    <div class="drop-down dropdown-profile">
+                        <div class="dropdown-content-heading">
+                            <span class="text-left">Upgrade Now</span>
+                            <p class="trial-day">30 Days Trail</p>
+                        </div>
+                        <div class="dropdown-content-body">
+                            <ul>
+                                <li><a href="#"><i class="ti-user"></i> <span>Profile</span></a></li>
+                                <li><a href="#"><i class="ti-wallet"></i> <span>My Balance</span></a></li>
+                                <li><a href="#"><i class="ti-write"></i> <span>My Task</span></a></li>
+                                <li><a href="#"><i class="ti-calendar"></i> <span>My Calender</span></a></li>
+                                <li><a href="#"><i class="ti-email"></i> <span>Inbox</span></a></li>
+                                <li><a href="#"><i class="ti-settings"></i> <span>Setting</span></a></li>
+                                <li><a href="#"><i class="ti-help-alt"></i> <span>Help</span></a></li>
+                                <li><a href="#"><i class="ti-lock"></i> <span>Lock Screen</span></a></li>
+                                <li><a href="#"><i class="ti-power-off"></i> <span>Logout</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="chat-sidebar">
+        <!-- BEGIN chat -->
+        <div id="mmc-chat" class="color-default">
+            <!-- BEGIN CHAT BOX -->
+            <div class="chat-box">
+                <!-- BEGIN CHAT BOXS -->
+                <ul class="boxs"></ul>
+                <!-- END CHAT BOXS -->
+                <div class="icons-set">
+                    <div class="stickers">
+                        <div class="had-container">
+                            <div class="row">
+                                <div class="s12">
+                                    <ul class="tabs" style="width: 100%;height: 60px;">
+                                        <li class="tab col s3">
+                                            <a href="#tab1" class="active">
+                                                 <img src="assets/images/avatar/1.jpg" alt="" />
+                                            </a>
+                                        </li>
+                                        <li class="tab col s3"><a href="#tab2">Test 2</a></li>
+                                    </ul>
+                                </div>
+                                <div id="tab1" class="s12 tab-content">
+                                    <ul>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                        <li> <img src="assets/images/avatar/1.jpg" alt="" /></li>
+                                    </ul>
+                                </div>
+                                <div id="tab2" class="s12 tab-content">Test 2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END CHAT BOX -->
+            <!-- BEGIN SIDEBAR -->
+            <div id="sidebar" class="right scroll">
+                <div class="had-container">
+                    <!-- BEGIN USERS -->
+                    <div class="users">
+
+                        <ul class="user-list">
+                            <!-- BEGIN USER-->
+                            <li class="user-tooltip" data-id="1" data-status="online" data-username="Rufat Askerov" data-position="left" data-filter-item data-filter-name="rufat askerov">
+                                <!-- BEGIN USER IMAGE-->
+                                <div class="user-image">
+                                    <img src="assets/images/avatar/1.jpg" class="avatar" alt="Rufat Askerov" />
+                                </div>
+                                <!-- END USER IMAGE-->
+                                <!-- BEGIN USERNAME-->
+                                <span class="user-name">Rufat Askerov</span>
+                                <span class="user-show"></span>
+                                <!-- END USERNAME-->
+                            </li>
+                            <!-- END USER-->
+                            <!-- BEGIN USER-->
+                            <li class="user-tooltip" data-id="3" data-status="online" data-username="Alice" data-position="left" data-filter-item data-filter-name="alice">
+                                <div class="user-image">
+                                    <img src="assets/images/avatar/1.jpg" class="avatar" alt="Alice" />
+                                </div>
+                                <span class="user-name">Alice</span>
+                                <span class="user-show"></span>
+                            </li>
+
+                            <!-- BEGIN USER-->
+                            <li class="user-tooltip" data-id="7" data-status="offline" data-username="Michael Scofield" data-position="left" data-filter-item data-filter-name="michael scofield">
+                                <div class="user-image">
+                                    <img src="assets/images/avatar/1.jpg" class="avatar" alt="Michael Scofield" />
+                                </div>
+                                <span class="user-name">Michael Scofield</span>
+                                <span class="user-show"></span>
+                            </li>
+
+                            <!-- BEGIN USER-->
+                            <li class="user-tooltip" data-id="5" data-status="online" data-username="Irina Shayk" data-position="left" data-filter-item data-filter-name="irina shayk">
+                                <div class="user-image">
+                                    <img src="assets/images/avatar/1.jpg" class="avatar" alt="Irina Shayk" />
+                                </div>
+                                <span class="user-name">Irina Shayk</span>
+                                <span class="user-show"></span>
+                            </li>
+
+                            <!-- BEGIN USER-->
+                            <li class="user-tooltip" data-id="6" data-status="offline" data-username="Sara Tancredi" data-position="left" data-filter-item data-filter-name="sara tancredi">
+                                <div class="user-image">
+                                    <img src="assets/images/avatar/1.jpg" class="avatar" alt="Sara Tancredi" />
+                                </div>
+                                <span class="user-name">Sara Tancredi</span>
+                                <span class="user-show"></span>
+                            </li>
+
+                            <!-- BEGIN USER-->
+                            <li class="user-tooltip" data-id="7" data-status="offline" data-username="Jane" data-position="left" data-filter-item data-filter-name="Jane">
+                                <div class="user-image">
+                                    <img src="assets/images/avatar/1.jpg" class="avatar" alt="Jane" />
+                                </div>
+                                <span class="user-name">Jane</span>
+                                <span class="user-show"></span>
+                            </li>
+                        </ul>
+                        <div class="chat-user-search">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="ti-search"></i></span>
+                                <input type="text" class="form-control" placeholder="Search" data-search />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END USERS -->
+
+                </div>
+            </div>
+            <!-- END SIDEBAR -->
+        </div>
+        <!-- END chat -->
+    </div>
+    <!-- END chat Sidebar-->
+
+
+    <div class="content-wrap">
+        <div class="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <h1>Dashboard 1</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 p-0">
+                        <div class="page-header">
+                            <div class="page-title">
+                                <ol class="breadcrumb text-right">
+                                    <li><a href="#">Dashboard</a></li>
+                                    <li><a href="#">Elements</a></li>
+                                    <li class="active">Basic</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card alert">
+                                <div class="card-header">
+                                    <h4>Alerts</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-muted m-b-15">Alerts are created with the <code>.alert</code> class, followed by one of the four contextual classes <code>.alert-success</code>, <code>.alert-info</code>, <code>.alert-warning</code> or
+                                        <code>.alert-danger</code>:</p>
+
+                                    <div class="alert alert-primary">
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-success">
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+
+                                    <div class="alert alert-info">
+                                        <strong>Info!</strong> Indicates a neutral informative change or action.
+                                    </div>
+
+                                    <div class="alert alert-warning">
+                                        <strong>Warning!</strong> Indicates a warning that might need attention.
+                                    </div>
+
+                                    <div class="alert alert-danger">
+                                        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+                                    </div>
+
+                                    <div class="alert alert-pink">
+                                        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card alert">
+                                <div class="card-header">
+                                    <h4>Alert Links</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-muted m-b-15">Add the <code>alert-link</code> class to any links inside the alert box to create "matching colored links":</p>
+
+                                    <div class="alert alert-primary">
+                                        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                                    </div>
+
+                                    <div class="alert alert-success">
+                                        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                                    </div>
+
+                                    <div class="alert alert-info">
+                                        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                                    </div>
+
+                                    <div class="alert alert-warning">
+                                        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                                    </div>
+
+                                    <div class="alert alert-danger">
+                                        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                                    </div>
+
+                                    <div class="alert alert-pink">
+                                        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /# row -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card alert">
+                                <div class="card-header">
+                                    <h4>Closing Alerts</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-muted m-b-15">To close the alert message, add a <code>.alert-dismissable</code> class to the alert container. Then add <code>class="close"</code> and <code>data-dismiss="alert"</code> to a link or a button element (when you click on this the alert box will disappear).</p>
+
+                                    <div class="alert alert-primary alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-success alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-warning alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-danger alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-pink alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card alert">
+                                <div class="card-header">
+                                    <h4>Animated Alerts</h4>
+                                </div>
+                                <div class="card-body">
+                                    <p class="text-muted m-b-15">The <code>.fade</code> and <code>.in</code> classes adds a fading effect when closing the alert message:</p>
+
+                                    <div class="alert alert-primary fade in alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-success fade in alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-warning fade in alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-danger fade in alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                    <div class="alert alert-pink fade in alert-dismissable">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>Success!</strong> Indicates a successful or positive action.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>     </div>
+            </div>
+            <!-- /# container-fluid -->
+        </div>
+        <!-- /# main -->
+    </div>
+    <!-- /# content wrap -->
+
+
+
+
+
+
+
+    <script src="/static/css/assets/js/lib/jquery.min.js"></script>
+    <!-- jquery vendor -->
+    <script src="/static/css/assets/js/lib/jquery.nanoscroller.min.js"></script>
+    <!-- nano scroller -->
+    <script src="/static/css/assets/js/lib/sidebar.js"></script>
+    <!-- sidebar -->
+    <script src="/static/css/assets/js/lib/bootstrap.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/static/css/assets/js/lib/mmc-common.js"></script>
+    <script src="/static/css/assets/js/lib/mmc-chat.js"></script>
+    <!--  Chart js -->
+    <!-- // Chart js -->
+    <script src="/static/css/assets/js/scripts.js"></script>
+    <!-- scripit init-->
+
+
+
+
+
+</body>
+
+</html>

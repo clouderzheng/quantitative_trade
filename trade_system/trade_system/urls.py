@@ -23,4 +23,5 @@ urlpatterns = [
     path(r'login/', views.login),
     path(r'loginin/', views.loginin),
     path(r'getIndex/', views.get_Nasdaq_Composite_Index),
+    path(r'stock/analyze/', views.stock_analyze_page),
 ]
