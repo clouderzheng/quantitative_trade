@@ -8,3 +8,4 @@ def get_system_user(account):
     result = mysql.getOne(query_user_by_account, account)
     # mysql.dispose()
     return result
+

@@ -4,11 +4,10 @@ from django.views.decorators.csrf import csrf_exempt
 from python_trade_system.system import system_user_service
 import json
 import uuid
-from python_trade_system.jq_util.get_international_indice import InternationalIndice
 from python_trade_system.system.date_format_util import DateEnconding
-import numpy as np
 # Create your views here.
-
+from python_trade_system.jq_service import get_index_service
+import traceback
 """跳转首页"""
 def index(request):
     return render(request, "index.html")
@@ -43,24 +42,18 @@ def loginin(request):
 
 """获取纳克达斯指数"""
 @csrf_exempt
-def get_Nasdaq_Composite_Index(request):
+def get_Global_Index(request):
 
     try:
-        internationalIndice = InternationalIndice()
-        # 获取纳克达斯指数
-        data = internationalIndice.get_Nasdaq_Composite_Index(100)
-        # 按照时间先后排序 升序
-        data = data.sort_values(by = 'day',axis = 0,ascending = True)
-        # 获取时间作为x轴
-        times = np.array( data['day']).tolist()
-        # 开盘价 收盘价 最高价 最低价最为 y轴
-        view_data = np.array(data[['open','close','low','high']]).tolist()
-        # 指数名称作为提示指标
-        code_name = data['name'][0]
-        result = {"times" : times, "view_data" : view_data,"code_name" : code_name}
+        result = {}
+        """获取纳斯达克指数信息"""
+        get_index_service.get_NASDAQ_index(result)
+        get_index_service.get_SSE_50_index(result)
     except:
+        traceback.print_exc()
         result['code'] = "9999"
-        result.msg = "获取国际指数失败"
+        result['msg'] = "获取国际指数失败"
+
     else:
         result['code'] = "0000"
     return HttpResponse(json.dumps(result, cls=DateEnconding))
