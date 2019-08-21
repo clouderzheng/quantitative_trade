@@ -1,4 +1,4 @@
-function echart_k(times,codeName,data) {
+function echart_k(times,codeName,data,indexName) {
     var option = {
     title : {
         text: codeName
@@ -46,6 +46,6 @@ function echart_k(times,codeName,data) {
         }
     ]
 };
-var myChart = echarts.init(document.getElementById('international_index'));
+var myChart = echarts.init(document.getElementById(indexName));
 myChart.setOption(option);
 }

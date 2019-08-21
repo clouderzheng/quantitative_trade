@@ -128,7 +128,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                                 <div class="card-header">
-                                    <h4 class="k_tile">International Index </h4>
+                                    <h4 class="k_tile">纳斯达克指数 </h4>
                                     <div id="international_index" style="height:400px;">
 
                                     </div>
@@ -138,9 +138,11 @@
                         <!-- /# column -->
                         <div class="col-lg-6">
                                 <div class="card-header">
-                                    <h4>Team Total Completed </h4>
+                                    <h4 class="k_tile">上证50指数 </h4>
                                 </div>
+                                 <div id="sse_index" style="height:400px;">
 
+                                 </div>
                         </div>
                         <!-- /# column -->
                     </div>
@@ -181,7 +183,8 @@
          data : {},
          success : function (res){
             if(res.code == "0000"){
-               echart_k(res.times_NASDAQ,res.code_name_NASDAQ,res.view_data_NASDAQ);
+               echart_k(res.times_NASDAQ,res.code_name_NASDAQ,res.view_data_NASDAQ,"international_index");
+               echart_k(res.times_SSE,res.code_name_SSE,res.view_data_SSE,"sse_index");
             }else{
                 alert(res.msg)
             }

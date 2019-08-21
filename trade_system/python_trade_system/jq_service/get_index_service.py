@@ -19,7 +19,10 @@ def deal_with_data(result,data , suff,sort_column):
 
     # 获取时间作为x轴
     if("SSE" == suff):
-        times = np.array(data.index).tolist()
+        date_ = data.index.date
+        times = []
+        for _date in date_:
+            times.append(_date)
     else:
         times = np.array(data[sort_column]).tolist()
 
@@ -31,7 +34,8 @@ def deal_with_data(result,data , suff,sort_column):
     result["view_data_" + suff] =  view_data
     result["code_name_" + suff] =  code_name
 
-
+import pandas as pd
 internationalIndice = InternationalIndice()
 data = internationalIndice.get_SSE_50_Index(100)
-print(data.index)
+# print(type(data.index[0]))
+date = data.index.date
