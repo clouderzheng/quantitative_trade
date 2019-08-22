@@ -132,3 +132,19 @@ class Mysql(object):
 # sql = "SELECT * from system_user where account = %s and  password = %s"
 # result = mysql.getOne(sql,("night","111"))
 #
+# sql = "insert into trade_stock (code_full,stock_name,stock_letters,code_short) values (%s,%s,%s,%s) "
+#
+# import xlrd
+# data = xlrd.open_workbook(r"O:\python_work\jq_stock\work\resources\jq_store.xls")
+# table = data.sheets()[0]
+# stock_list = []
+# for row in range((table.nrows - 1)):
+#     stock_row_list = []
+#     stock_list.append(stock_row_list)
+#     for col in range(table.ncols - 2):
+#         stock_row_list.append(table.cell(row + 1, col).value)
+#     stock_row_list.append(stock_row_list[0][0:6])
+# # mysql.begin()
+# print(stock_list)
+# mysql.insertMany(sql,stock_list)
+# mysql.end()
